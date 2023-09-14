@@ -1,0 +1,51 @@
+.main-footer {
+  font-size: 0.7em;
+  margin-left: 20%;
+  color: var(--letter-color2);
+  display: flex;
+  flex-direction: column;
+  height: 12rem;
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+@media screen and (max-width: 770px) {
+  .main-footer {
+    display: none;
+  }
+}
+
+.footer-data {
+  padding-left: 0.1em;
+  padding-right: 1em;
+  display: flex;
+  flex-direction: row;
+}
+.footer-data ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--letter-color);
+  list-style: none;
+  gap: 1.2rem;
+}
+.footer-data li:hover {
+  cursor: pointer;
+}
+.footer-data li {
+  color: var(--letter-color2);
+}
+
+.footer-copy {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.footer-copy a {
+  color: var(--letter-color2);
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=footer.css.map */

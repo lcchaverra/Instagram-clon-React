@@ -1,0 +1,49 @@
+.sections-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 3rem;
+  margin-left: 17.6%;
+  gap: 3.5rem;
+  font-size: small;
+  font-weight: 400;
+  color: var(--letter-color2);
+}
+.sections-menu svg {
+  color: inherit;
+}
+
+.section-menu-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  transition: all 0.2s;
+}
+.section-menu-item:hover {
+  cursor: pointer;
+}
+@media screen and (max-width: 770px) {
+  .section-menu-item span {
+    display: none;
+  }
+  .section-menu-item svg {
+    transform: scale(2);
+    margin: 0 2.1rem;
+  }
+}
+
+.active {
+  position: relative;
+  color: var(--letter-color);
+}
+.active::before {
+  position: absolute;
+  content: "";
+  border-top: 1px solid var(--letter-color);
+  width: 100%;
+  top: -1.2rem;
+}
+
+/*# sourceMappingURL=userNavigation.css.map */

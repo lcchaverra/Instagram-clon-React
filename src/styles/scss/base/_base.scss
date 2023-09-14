@@ -1,0 +1,51 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-size: var(--body-font-size);
+    min-height: 100vh;
+    background-color: var(--bg-color2);
+    color: var(--letter-color);
+}
+
+.main-body {
+    display: flex;
+    flex-grow: 1;
+  }
+  
+  .main-content {
+    margin-left: 20%;
+    flex-grow: 1;
+    @media screen and (max-width: 770px) {
+      margin-left: 0;
+    }
+  }
+  
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+}
+
+h3 {
+    font-size: var(--h3-font-size);
+}

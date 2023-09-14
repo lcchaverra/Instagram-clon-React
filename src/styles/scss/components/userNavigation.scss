@@ -1,0 +1,52 @@
+.sections-menu {
+    // width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 3rem;
+    margin-left: 17.6%;
+    gap: 3.5rem;
+    font-size: small;
+    font-weight: 400;
+    color: var(--letter-color2);
+    & svg {
+      color: inherit;
+    }
+  }
+  
+  .section-menu-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    transition: all 0.2s;
+    &:hover {
+      cursor: pointer;
+    }
+    @media screen and (max-width: 770px) {
+      & span {
+        display: none;
+      }
+      & svg {
+        transform: scale(2);
+        margin: 0 2.1rem;
+      }
+    }
+  }
+  
+  
+  .active {
+    position: relative;
+    color: var(--letter-color);
+    
+    &::before {
+      position: absolute;
+      content: '';
+      border-top: 1px solid var(--letter-color);
+      width: 100%;
+      top: -1.2rem;
+    }
+  }
+
+  
