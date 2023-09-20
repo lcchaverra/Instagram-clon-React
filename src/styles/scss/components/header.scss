@@ -13,10 +13,10 @@
     }
     & .header-profile-pic {
       display: flex;
+      // width: 30rem;
       @include rwd(l){
         display: block;  
       }
-      width: 30rem;
       & .content-profile-movil {
         display: none;
       }

@@ -1,10 +1,11 @@
-import './App.css'
+import SideBar from "../components/sideBar/SideBar"
 
 function App() {
 
   return (
     <>
-      <p>Soy el proyecto Vacio :3</p>
+      <SideBar/>
+      <p>Pagina de inicio</p>
     </>
   )
 }

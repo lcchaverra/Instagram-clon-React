@@ -155,4 +155,11 @@
   font-weight: bold;
 }
 
+.Non-Style {
+  text-decoration: none;
+  color: var(--letter-color);
+  border: none;
+  outline: none;
+}
+
 /*# sourceMappingURL=sidebar.css.map */
