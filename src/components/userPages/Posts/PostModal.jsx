@@ -8,7 +8,8 @@ const PostModal = ({children}) => {
   const { userName, setUserName } = useContext(userDataContext)
   const [liked,setliked] = useState(false)
   const inputRef = useRef(null)
-  const [userData, setUserData] = useState(null);
+  const [userData, setUserData] = useState(null)
+  const [forceRender, setForceRender] = useState(false)
 
   const like = () => {
     setliked(!liked)
@@ -21,6 +22,7 @@ const PostModal = ({children}) => {
       message : inputRef.current.value, 
     }
     localStorage.setItem('datosUsuario', JSON.stringify(datossuario))
+    setForceRender(!forceRender);
   }
   useEffect(()=>{
     const storedData = localStorage.getItem('datosUsuario')
@@ -28,7 +30,7 @@ const PostModal = ({children}) => {
       const parsedData = JSON.parse(storedData);
       setUserData(parsedData);
     }
-  },[])
+  },[forceRender])
 
   return (
     <>
