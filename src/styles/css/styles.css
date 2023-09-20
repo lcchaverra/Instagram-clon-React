@@ -578,4 +578,274 @@ h3 {
   cursor: pointer;
 }
 
+.grid-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0.4em 5em;
+  gap: 0.3em;
+  margin-left: 17.6%;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 1024px) {
+  .grid-content {
+    padding: 0.3em 0;
+  }
+}
+
+.grid-item {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+}
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.grid-item:hover {
+  filter: brightness(0.7);
+  cursor: pointer;
+}
+.grid-item:hover::after {
+  color: var(--letter-color);
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  left: 8rem;
+  top: 9.4rem;
+  background-image: url("/src/assets/img/charlar.png");
+  background-size: cover;
+}
+.grid-item:hover::before {
+  color: var(--letter-color);
+  content: "0";
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  left: 9.6rem;
+  top: 9.5rem;
+  z-index: 10;
+}
+
+.Modal-container {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5882352941);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+
+.Modal {
+  color: red;
+  position: absolute;
+  top: 1rem;
+  width: 55rem;
+  height: 30rem;
+  background-color: var(--letter-color);
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Modal img {
+  width: 100%;
+  height: 100%;
+}
+
+.close-modal-container {
+  position: relative;
+}
+
+.close-modal-button {
+  z-index: 20;
+  position: absolute;
+  top: 0vh;
+  left: 70vw;
+  width: 3rem;
+  background-color: transparent;
+  border: none;
+}
+.close-modal-button img {
+  filter: invert(1);
+  width: 1.3rem;
+}
+
+.Modal-content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  height: 100%;
+}
+
+.Modal-content-item .Modal-right-elements {
+  padding: 1rem;
+  background-color: var(--bg-color2);
+  color: var(--letter-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.user-info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.2431372549);
+}
+.user-info .user-info-start {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+}
+.user-info .user-info-start .user-name {
+  font-weight: 600;
+}
+.user-info span:hover {
+  color: var(--letter-color2);
+  cursor: pointer;
+}
+.user-info .user-info-profile-pic {
+  width: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.user-info .more-options {
+  font-size: x-large;
+  cursor: pointer;
+}
+
+.comments-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem;
+  height: 100%;
+}
+.comments-section .without-comments-title {
+  font-weight: bolder;
+  font-size: x-large;
+  margin-bottom: 0.4rem;
+}
+
+.comments-section-without-comments {
+  justify-content: center;
+  align-items: center;
+}
+
+.icons-sections {
+  border-top: 1px solid rgba(204, 204, 204, 0.2431372549);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0.4rem;
+}
+.icons-sections svg:hover {
+  color: var(--letter-color2);
+  cursor: pointer;
+}
+
+.icons-start {
+  display: flex;
+  gap: 1.1rem;
+}
+.icons-start svg:hover {
+  color: var(--letter-color2);
+  cursor: pointer;
+}
+
+.liked {
+  color: red;
+  fill: red;
+}
+
+.user-liked {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.user-liked .user-comment-profile-pic {
+  width: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.post-comments-sections {
+  border-top: 1px solid rgba(204, 204, 204, 0.2431372549);
+  padding: 0.6rem 1rem;
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.4rem;
+}
+.post-comments-sections svg:hover {
+  color: var(--letter-color2);
+  fill: var(--letter-color2);
+  cursor: pointer;
+}
+.post-comments-sections .comment-input {
+  background-color: var(--bg-color2);
+  color: var(--letter-color);
+  border: none;
+}
+.post-comments-sections .comment-button {
+  background-color: var(--bg-color2);
+  color: var(--letter-color);
+  border: none;
+}
+.post-comments-sections .comment-button:hover {
+  cursor: pointer;
+  color: var(--letter-color2);
+}
+
+.comment-element {
+  color: var(--letter-color);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.comment-element .comment-data-container {
+  display: flex;
+  flex-direction: column;
+}
+.comment-element .comment-data-container .comment-time-response {
+  font-size: small;
+  color: var(--letter-color2);
+}
+.comment-element .comment-data {
+  display: flex;
+  gap: 1rem;
+  height: 2.3rem;
+}
+.comment-element .comment-data .comment-username {
+  font-weight: 600;
+}
+.comment-element .comment-time-response {
+  display: flex;
+  gap: 1rem;
+}
+.comment-element .comment-time-response span:hover {
+  cursor: pointer;
+}
+
+.comment-pic {
+  width: 2rem;
+  height: 2rem;
+}
+.comment-pic img {
+  border-radius: 50%;
+}
+
 /*# sourceMappingURL=styles.css.map */

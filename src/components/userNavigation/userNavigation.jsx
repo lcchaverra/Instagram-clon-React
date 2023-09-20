@@ -1,6 +1,6 @@
 import { useState } from "react"
 import WithoutContent from "../userPages/withoutContent/WithoutContent"
-// import RoutesWrapper from '../../router/RouterUser'
+import PostSections from "../userPages/Posts/PostSections"
 
 const userNavigation = () => {
     const [activeItem, setActiveItem] = useState(true)
@@ -8,7 +8,6 @@ const userNavigation = () => {
 
     return (
     <>
-        {/* <RoutesWrapper> */}
             <div className="sections-menu">
                     <div className={`section-menu-item ${activeItem ? 'active' : ''}`}>
                         <svg aria-label="" className="_ab6-" color="rgb(245, 245, 245)" fill="rgb(245, 245, 245)" height="12" role="img" viewBox="0 0 24 24" width="12"><rect fill="none" height="18" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" width="18" x="3" y="3"></rect><line fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" x1="9.015" x2="9.015" y1="3" y2="21"></line><line fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" x1="14.985" x2="14.985" y1="3" y2="21"></line><line fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" x1="21" x2="3" y1="9.015" y2="9.015"></line><line fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" x1="21" x2="3" y1="14.985" y2="14.985"></line></svg>
@@ -23,8 +22,7 @@ const userNavigation = () => {
                         <span>ETIQUETADAS</span>
                     </div>
             </div>
-        {/* </RoutesWrapper> */}
-        <WithoutContent/>
+        <PostSections/>
     </>
   )
 }

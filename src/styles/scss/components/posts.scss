@@ -1,0 +1,291 @@
+.grid-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // width: 100%;
+    padding: 0.4em 5em;
+    gap: 0.3em;
+    margin-left: 17.6%;
+    margin-bottom: 2rem;
+    @media screen and (max-width: 1024px) {
+      padding: 0.3em 0;
+    }
+  }
+  
+  .grid-item {
+    width: 100%;
+    height: 0;
+    padding-bottom: calc(100% / 1);
+    position: relative;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &:hover {
+      filter: brightness(0.7);
+      cursor: pointer;
+      &::after {
+        color: var(--letter-color);
+        content: "";
+        width: 1.5rem;
+        height: 1.5rem;
+        position: absolute;
+        left: 8rem;
+        top: 9.4rem;
+        background-image: url("/src/assets/img/charlar.png");
+        background-size: cover;
+      }
+  
+      &::before {
+        color: var(--letter-color);;
+        content: "0";
+        width: 1.5rem;
+        height: 1.5rem;
+        position: absolute;
+        left: 9.6rem;
+        top: 9.5rem;
+        z-index: 10;
+      }
+    }
+  }
+  
+  .Modal-container {
+    position: absolute;
+    background-color: #00000096;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+  }
+
+  .Modal {
+    color: red;
+    position: absolute;
+    top: 1rem;
+    width: 55rem;
+    height: 30rem;
+    background-color: var(--letter-color);;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  .close-modal-container {
+    position: relative;
+    
+  }
+  
+  .close-modal-button {
+    z-index: 20;
+    position: absolute;
+    top: 0vh;
+    left: 70vw;
+    width: 3rem;
+    background-color: transparent;
+    border: none;
+    & img {
+      filter: invert(1);
+      width: 1.3rem;
+    }
+  }
+
+  .Modal-content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: 100%;
+  }
+
+  .Modal-content-item {
+    & .Modal-right-elements {
+      padding: 1rem;
+      background-color: var(--bg-color2);
+      color: var(--letter-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+  }
+
+
+  .user-info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #cccccc3e;
+    
+    & .user-info-start {
+      display: flex; 
+      gap:.7rem;
+      align-items: center;
+      & .user-name {
+        font-weight:600;
+      }
+    }
+
+    & span:hover {
+      color: var(--letter-color2);
+      cursor: pointer;
+    }
+
+    & .user-info-profile-pic {
+      width: 2rem;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    & .more-options {
+      font-size:x-large;
+      cursor: pointer;
+    }
+  }
+
+  .comments-section {
+    display: flex;
+    flex-direction: column;
+    padding: .4rem;
+    height: 100%;
+
+    & .without-comments-title {
+      font-weight: bolder;
+      font-size: x-large;
+      margin-bottom: .4rem;
+    }
+  }
+
+  .comments-section-without-comments {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icons-sections {
+    border-top: 1px solid #cccccc3e;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem .4rem;
+    
+    // & svg {
+      // fill: var(--letter-color);;
+      // color: var(--letter-color);
+    // }
+
+    & svg:hover {
+      color: var(--letter-color2);
+      cursor: pointer;
+    }
+  }
+  
+  .icons-start {
+    display: flex;
+    gap: 1.1rem;
+    & svg:hover {
+      color: var(--letter-color2);
+      cursor: pointer;
+    }
+  }
+
+  .liked {
+    color: red;
+    fill: red;
+  }
+  
+  .user-liked {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    
+    & .user-comment-profile-pic {
+      width: 1.5rem;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+  }
+
+  .post-comments-sections {
+    border-top: 1px solid #cccccc3e;
+    padding: .6rem 1rem;
+    display: flex;
+    gap: 1rem;
+    margin-top: .4rem;
+
+    & svg:hover {
+      color: var(--letter-color2);
+      fill: var(--letter-color2);
+      cursor: pointer;
+    }
+
+    & .comment-input {
+      background-color: var(--bg-color2);
+      color: var(--letter-color);
+      border: none;
+    }
+
+    & .comment-button {
+      background-color: var(--bg-color2);
+      color: var(--letter-color);
+      border: none;
+    }
+    & .comment-button:hover {
+      cursor: pointer;
+      color: var(--letter-color2);
+    }
+  }
+
+  .comment-element {
+    color: var(--letter-color);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    & .comment-data-container {
+      display: flex;
+      flex-direction: column;
+
+      & .comment-time-response {
+        font-size: small;
+        color: var(--letter-color2);
+      }
+    }
+    & .comment-data {
+      display: flex;
+      gap: 1rem;
+      height: 2.3rem;
+      & .comment-username {
+        font-weight: 600;
+      }
+    }
+
+    & .comment-time-response {
+      display: flex;
+      gap: 1rem;
+      & span:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .comment-pic {
+    width: 2rem;
+    height: 2rem;
+    & img {
+      border-radius: 50%;
+    }
+  }
