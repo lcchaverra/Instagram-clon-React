@@ -854,4 +854,108 @@ h3 {
   border-radius: 50%;
 }
 
+.suggestion-container-relative {
+  position: relative;
+}
+
+.suggestion-container {
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.8rem;
+  width: 25%;
+  height: 25rem;
+  display: none;
+}
+@media screen and (min-width: 960px) {
+  .suggestion-container {
+    display: block;
+  }
+}
+
+.profile-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  font-size: small;
+}
+.profile-section .profile-section-pic {
+  width: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.profile-section .profile-section-info {
+  color: var(--letter-color);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.profile-section .profile-section-info .sub-user {
+  color: var(--letter-color2);
+}
+.profile-section .change-button {
+  font-weight: 600;
+  color: rgb(0, 149, 246);
+  cursor: pointer;
+}
+
+.suggestion-section {
+  display: flex;
+  justify-content: space-between;
+  font-size: small;
+  color: var(--letter-color2);
+}
+
+.suggestion-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.suggestion-body .suggestion-item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: small;
+}
+.suggestion-body .suggestion-item .profile-section-pic {
+  width: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.suggestion-body .suggestion-item .profile-section-info {
+  color: var(--letter-color);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.suggestion-body .suggestion-item .profile-section-info .sub-user {
+  color: var(--letter-color2);
+}
+.suggestion-body .suggestion-item .change-button {
+  font-weight: 600;
+  color: rgb(0, 149, 246);
+  cursor: pointer;
+}
+
+.suggestion-footer {
+  font-size: small;
+  color: var(--letter-color2);
+}
+
+.suggestion-footer-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.suggestion-footer-list li {
+  list-style: none;
+}
+
 /*# sourceMappingURL=styles.css.map */
