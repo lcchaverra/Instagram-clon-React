@@ -20,7 +20,7 @@
 
 .profile-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around   ;
     width: 100%;
     align-items: center;
     font-size: small;
@@ -51,14 +51,16 @@
     justify-content: space-between;
     font-size: small;
     color: var(--letter-color2);
+    margin-top: 1rem;
 }
 
 .suggestion-body {
-    // height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: .3rem;
+    gap: 1.3rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     & .suggestion-item {
         display: flex;
         align-items: center;

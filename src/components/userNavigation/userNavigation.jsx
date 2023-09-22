@@ -22,7 +22,7 @@ const userNavigation = () => {
                         <span>ETIQUETADAS</span>
                     </div>
             </div>
-        <PostSections/>
+        {contentEmpty ? <WithoutContent/> :<PostSections/> }
     </>
   )
 }

@@ -1,9 +1,8 @@
 import { useContext, useEffect, useRef, useState } from "react"
-import { userDataContext } from '../../../pages/ProfileSection'
-import ProfilePic from '../../../assets/img/usuario/perfil.jpg'
+import { userDataContext } from '../../pages/App'
+import ProfilePic from '../../assets/img/usuario/perfil.jpg'
 
 const PostModal = ({children}) => {
-
   const [comments,setComments] = useState(false)
   const { userName, setUserName } = useContext(userDataContext)
   const [liked,setliked] = useState(false)
