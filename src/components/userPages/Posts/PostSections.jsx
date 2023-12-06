@@ -1,4 +1,4 @@
-import Post from "./post"
+import Post from "./Post"
 import Post1Img from '/src/assets/post/1.jpg'
 import Post2Img from '../../../assets/post/2.jpg'
 
